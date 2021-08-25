@@ -41,7 +41,22 @@ function min(x: number = 2, y: number = 3) {
     }
 }
 min()
+/*4. Escreva uma função pow(x,y)que calcula o valor de 푥푦, ou seja, x elevado a potência y. Assuma que os valores de xeysão números inteirosnão negativose que 푥0=1para qualquer valor de x.Apresente uma versão iterativa e uma versão recursiva para a função.Não utilize o operador **.
+Utilize corretamente a declaração de tipos nos parâmetros e no resultado da função*/ 
 
+function pow(base: number, exp: number) {
+
+    let res = 1
+
+    for (let i = 0; i < exp; i++) {
+        res *= base;
+    }
+
+    console.log(res)
+    return res
+
+}
+pow (10,2)
 /*5. Escreva uma função toMaiusculaPrimeira(s)que recebe uma string s(assuma qualquer string não vazia) e retorna a mesma string com a primeira letra em maiúscula.
 Utilize corretamente a declaração de tipos nos parâmetros e no resultado da função*/
 
@@ -62,21 +77,21 @@ function getMax(a: number[] = [1, 2, 3]) {
 }
 /*7. Escreva uma função que, utilizando objetos Map, calcule a frequência de cadanúmeropresenteem um determinado array contendo números inteiros.
 Utilize corretamente a declaração de tipos nos parâmetros e no resultado da função*/
-function presence(arr:number[]):Map<number,number>{
-    let result = new Map<number,number>();
+function presence(arr: number[]): Map<number, number> {
+    let result = new Map<number, number>();
 
-    arr.forEach((val:number,index:number)=>{
+    arr.forEach((val: number, index: number) => {
         let actual = val;
         let counter = 0;
-        arr.forEach((v:number)=>{
-            if(actual == v)counter++;
+        arr.forEach((v: number) => {
+            if (actual == v) counter++;
         })
-        result.set(val,counter);
+        result.set(val, counter);
     })
     return result;
 }
 
-console.log(presence([2,2,2,3,4,5,6,7,8]));
+console.log(presence([2, 2, 2, 3, 4, 5, 6, 7, 8]));
 
 
 
